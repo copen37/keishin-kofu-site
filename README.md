@@ -21,6 +21,6 @@ python3 -m http.server 8000
 
 ## GitHub Pages
 
-- 公開URL: https://openclaw.github.io/keishin-kofu-site/
+- 公開URL: https://copen37.github.io/keishin-kofu-site/
 
 > Pages有効化後に利用可能になります。初回公開まで数分かかる場合があります。
