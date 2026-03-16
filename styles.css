@@ -76,25 +76,29 @@ h3 {
   font-size: 0.88rem;
 }
 
-.old-site-card {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 14px;
-  padding: 0.6rem;
-  max-width: 360px;
+.hero-figure {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  min-height: 250px;
+  max-width: 440px;
   margin-left: auto;
+  box-shadow: 0 16px 36px rgba(8, 24, 44, 0.28);
 }
 
-.old-site-card img {
+.hero-figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 34, 58, 0.06), rgba(10, 34, 58, 0.3));
+  pointer-events: none;
+}
+
+.hero-figure img {
   width: 100%;
-  border-radius: 10px;
+  height: 100%;
+  object-fit: cover;
   display: block;
-}
-
-.old-site-card p {
-  margin: 0.5rem 0 0;
-  font-size: 0.84rem;
-  opacity: 0.95;
 }
 
 .section {
@@ -152,9 +156,10 @@ a {
     grid-template-columns: 1fr;
   }
 
-  .old-site-card {
+  .hero-figure {
     margin-left: 0;
     max-width: 100%;
+    min-height: 220px;
   }
 
   .section {
