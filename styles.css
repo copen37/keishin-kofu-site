@@ -1,0 +1,163 @@
+:root {
+  --bg: #f5f8fb;
+  --surface: #ffffff;
+  --ink: #13233a;
+  --muted: #5a6b7f;
+  --brand: #1e6aa8;
+  --brand-soft: #e7f1fa;
+  --line: #dbe5ef;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Kaku Gothic ProN", "Yu Gothic", "Noto Sans JP", sans-serif;
+  color: var(--ink);
+  background: var(--bg);
+  line-height: 1.7;
+}
+
+.container {
+  width: min(1120px, 92vw);
+  margin: 0 auto;
+}
+
+.hero {
+  background: linear-gradient(160deg, #0f3b61, #225f97 55%, #3f80bf);
+  color: #fff;
+  padding: 3.5rem 0;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.eyebrow {
+  letter-spacing: 0.08em;
+  font-size: 0.84rem;
+  opacity: 0.9;
+  margin: 0 0 0.2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-top: 0;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.15rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hero-badges span {
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+}
+
+.old-site-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  padding: 0.6rem;
+  max-width: 360px;
+  margin-left: auto;
+}
+
+.old-site-card img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.old-site-card p {
+  margin: 0.5rem 0 0;
+  font-size: 0.84rem;
+  opacity: 0.95;
+}
+
+.section {
+  padding: 3rem 0;
+}
+
+.section.alt {
+  background: #eef4fa;
+}
+
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid.three {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.1rem;
+}
+
+ul {
+  margin: 0.3rem 0 0;
+  padding-left: 1.1rem;
+}
+
+a {
+  color: var(--brand);
+}
+
+.small {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.footer {
+  padding: 1.2rem 0 2.2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .hero-inner,
+  .grid.three,
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .old-site-card {
+    margin-left: 0;
+    max-width: 100%;
+  }
+
+  .section {
+    padding: 2.2rem 0;
+  }
+}
